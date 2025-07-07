@@ -106,6 +106,10 @@ ws.onmessage = async (event) => {
   }
 };
 
-setInterval(updateExchangeRate, 3600000);
+setInterval(() => {
+    lastDonationElement.classList.remove('update-animation');
+    void lastDonationElement.offsetWidth;
+    lastDonationElement.classList.add('update-animation');
+}, 60000);
 
 updateExchangeRate();
