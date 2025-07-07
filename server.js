@@ -148,7 +148,7 @@ const server = app.listen(PORT, async () => {
   console.log(`👛 Monitoring address: ${YOUR_AR_ADDRESS}`);
   
   await updateLatestDonation();
-  setInterval(updateLatestDonation, 240000);
+  setInterval(updateLatestDonation, 60000); // Check every minute
 });
 
 server.on('upgrade', (req, socket, head) => {
